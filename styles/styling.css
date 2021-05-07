@@ -1,0 +1,17 @@
+div#banner-content { 
+    width: 100%; 
+    margin: 0 auto; 
+    padding: 60px; 
+    color: white;
+    font-size: xx-large;
+}
+
+div#banner { 
+    top: 0; 
+    left: 0; 
+    background-color: #c5c0be; 
+    width: 100%; 
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
