@@ -1,2 +1,2 @@
-# movie-awards-shoppies
+# The Shoppies
 An awards show using OMDB API 
