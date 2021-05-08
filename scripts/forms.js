@@ -15,7 +15,6 @@ $(document).ready(()=> {
     function apiCall(searchtxt){
         axios.get('http://www.omdbapi.com/?apikey=7aefcf4e&s='+searchtxt).then((response) => {
                 let mov_list = response.data.Search;
-                console.log(mov_list);
                 let output = '';
                 $.each(mov_list, (index, movies)=> {
                     output += ` 
@@ -32,11 +31,15 @@ $(document).ready(()=> {
     };
     
     function nominate(title, year){
-        let output = `<h5 id="movie_nom"> `+title+ ` (`+year+`)</h5> 
-        <button id="removebtn" onclick="remove()">Remove</button>`;
+        let output = `
+        <div id="nom_result">
+        <h5 id="movie_nom"> `+title+ ` (`+year+`)</h5> 
+        <button id="removebtn" onclick="remove()">Remove</button>
+        </div>`;
         $('#nominations').append(output);
     }
 
     function remove(){
-        
+        var div = document.getElementById('nom_result');
+        div.parentNode.removeChild(div);
     }
