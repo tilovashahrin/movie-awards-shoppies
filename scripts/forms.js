@@ -6,10 +6,9 @@ $(document).ready(()=> {
         e.preventDefault();
     });
 
-    $('#nominatebtn').on('click', (e)=>{
-        console.log("line 10 works");
-    })
-
+    $("#removebtn").on('click', (e) =>{
+        e.preventDefault();
+    });
 })
 
     function apiCall(searchtxt){
@@ -19,7 +18,7 @@ $(document).ready(()=> {
                 $.each(mov_list, (index, movies)=> {
                     output += ` 
                     <h5 id="movie"> ${movies.Title} (${movies.Year})</h5> 
-                    <button id="nominatebtn" onclick="nominate('${movies.Title}', '${movies.Year}')">Nominate</button>
+                    <button type="button" id="nominatebtn" onclick="nominate('${movies.Title}', '${movies.Year}')">Nominate</button>
                     `;
                 })
                 $('#movie_details').append(output);
@@ -31,12 +30,21 @@ $(document).ready(()=> {
     };
     
     function nominate(title, year){
-        let output = `
-        <div id="nom_result">
-        <h5 id="movie_nom"> `+title+ ` (`+year+`)</h5> 
-        <button id="removebtn" onclick="remove()">Remove</button>
-        </div>`;
-        $('#nominations').append(output);
+        
+        var $selected = $('#nominations');
+        var $kids = $selected.children();
+        if ($kids.length >= 5){
+            //$kids.last().remove();
+            alert("Can only have 5 nominations");
+        }else{
+            let output = `
+                <div id="nom_result">
+                <h5 id="movie_nom"> `+title+ ` (`+year+`)</h5> 
+                <button type="button" id="removebtn" onclick="remove()">Remove</button>
+                </div>`;
+            $('#nominations').append(output);
+        }
+        
     }
 
     function remove(){
