@@ -16,10 +16,22 @@ div#banner {
     margin-bottom: 10px;
   }
 
-  .movie_details{
+.movie_details{
     float: left;
     font-weight: bold; 
     font-weight: 700;
-    text-align: center;
+    text-align: left;
     width: 350px;
+}
+
+.searchbox{
+    float: left;
+    padding-left:20%;
+    background-color: #e2dcda; 
+}
+
+div#nom_container{
+    background-color: #e2dcda; 
+    float: right;
+    padding-right: 40%;
 }
