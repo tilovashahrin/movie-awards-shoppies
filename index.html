@@ -11,8 +11,9 @@
     
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     
-        <script src="scripts/form.js"></script>
+        <script src="scripts/forms.js"></script>
 
     </head>
     <body>
@@ -20,12 +21,27 @@
             <div id="banner-content">Shoppies</div>
         </div>
 
-        <form>
-            <div class="search">
-             <input id="theSearch" placeholder="Movie" type="text" ngTrim="true" />
-             <button ng-click="fetch()">Search</button>
+        <form>Movie Title
+            <div class="search" >
+             <form id="searchform">
+                <input id="searchText" placeholder="Enter here" type="text" ngTrim="true" />
+             </form>
+             <button id="searchbtn">Search</button>
              <div class="clear"></div>
             </div>
           </form>
+        
+          <form id ="MovieForm">
+          <div class="result">
+            <div class="movie_details" id="movie_details">
+                    <!-- <div class="formElement" id="Title" class = "form">Title:
+                    </div>
+        
+                    <div class="formElement" id="Year" class = "form"> Year:
+                    </div> -->
+            </div>
+        </div>
+    </form>
+        <div id="nominations"></div>
     </body>
 </html>
