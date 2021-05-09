@@ -20,9 +20,9 @@
         <div id="banner">
             <div id="banner-content">Shoppies</div>
         </div>
-
+        <div class="grid-container">
         <div class="searchbox">
-            <form>Movie Title
+            <form id="movtitle">Movie Title
                 <div class="search" >
                     <form id="searchform">
                         <input id="searchText" placeholder="Enter here" type="text" ngTrim="true" />
@@ -33,13 +33,15 @@
         </div>
         
         <form id ="MovieForm">
-            <div class="result" id="result">
+            <div class="result" id="result">            
+                <div id=results-title></div>
                 <div class="movie_details" id="movie_details"></div>
             </div>
         </form>
         <div id="nom_container">
-            <div id="nominations">Nominations:</div>
-            <button type="button" id="donebtn" class="donebtn" onclick="done()" style="display:none">Done</button>
+            <div id="nom">Nominations:</div>
+            <div id="nominations"></div>
         </div>
+    </div>
     </body>
 </html>

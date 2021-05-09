@@ -1,3 +1,14 @@
+.grid-container{
+    display: grid;
+    grid-gap: 10px;
+}
+form#movtitle{
+    font-size: 140%;
+}
+
+div#nom{
+    font-size: 140%;
+}
 div#banner-content { 
     width: 100%; 
     margin: 0 auto; 
@@ -9,29 +20,34 @@ div#banner-content {
 div#banner { 
     top: 0; 
     left: 0; 
-    background-color: #c5c0be; 
+    background-color: #eeae95; 
     width: 100%; 
     display: flex;
     justify-content: flex-end;
     margin-bottom: 10px;
-  }
-
-.movie_details{
-    float: left;
-    font-weight: bold; 
-    font-weight: 700;
-    text-align: left;
-    width: 350px;
 }
 
 .searchbox{
-    float: left;
-    padding-left:20%;
-    background-color: #e2dcda; 
+    background-color: #ffffff; 
+    grid-column: 1;
+    padding-left: 20%;
+    padding-top: 10%;
+}
+
+.movie_details{
+    font-weight: bold; 
+    font-weight: 700;
+    align-content: center;
+    text-align: left;
+    background-color: #ffffff; 
+    width: 60%;
+    padding-top: 10%;
 }
 
 div#nom_container{
-    background-color: #e2dcda; 
-    float: right;
-    padding-right: 40%;
+    align-content: center;
+    background-color: #ffffff; 
+    grid-column: 3;
+    width: 100%;
+    padding-top: 10%;
 }
