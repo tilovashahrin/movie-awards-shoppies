@@ -26,7 +26,7 @@ $(document).ready(()=> {
                 $.each(mov_list, (index, movies)=> {
                     output += ` 
                     <h5 id="movie"> ${movies.Title} (${movies.Year})</h5> 
-                    <button type="button" id="nominatebtn" onclick="nominate('${movies.Title}', '${movies.Year}')">Nominate</button>
+                    <button type="button" id="nominatebtn${movies.Title}" onclick="nominate('${movies.Title}', '${movies.Year}')">Nominate</button>
                     `;
                 })
                 //$('#results-title').append('Results for "'+ searchtxt +'"');
@@ -38,7 +38,10 @@ $(document).ready(()=> {
         })
     };
     
-    function nominate(title, year){       
+    function nominate(title, year){    
+        var div = document.getElementById('nominatebtn' + title);
+        div.parentNode.removeChild(div);
+
         var $selected = $('#nominations');
         var $kids = $selected.children();
         if ($kids.length >= 5){         
