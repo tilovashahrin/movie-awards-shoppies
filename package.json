@@ -7,7 +7,7 @@
       "npm": "6.14.4"
     },
     "scripts": {
-        "start": "node forms.js",
+        "start": "forms.js",
         "heroku-prebuild": "echo This runs before Heroku installs dependencies.",
         "heroku-postbuild": "echo This runs after Heroku installs dependencies, but before Heroku prunes and caches dependencies.",
         "heroku-cleanup": "echo This runs after Heroku prunes and caches dependencies."
