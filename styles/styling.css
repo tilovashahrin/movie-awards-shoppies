@@ -15,6 +15,8 @@ div#banner-content {
     padding: 60px; 
     color: white;
     font-size: xx-large;
+    text-transform: uppercase;
+    letter-spacing: .15rem;
 }
 
 div#banner { 
@@ -50,4 +52,25 @@ div#nom_container{
     grid-column: 3;
     width: 100%;
     padding-top: 10%;
+}
+
+.grid-container{
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+}
+
+.searchbtn, .nominatebtn, .removebtn{
+	display: inline-block;
+    padding: .2rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+    background-color: #eeae95;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }

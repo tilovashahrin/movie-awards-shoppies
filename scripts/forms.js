@@ -26,7 +26,7 @@ $(document).ready(()=> {
                 $.each(mov_list, (index, movies)=> {
                     output += ` 
                     <h5 id="movie"> ${movies.Title} (${movies.Year})</h5> 
-                    <button type="button" id="nominatebtn${movies.Title}" onclick="nominate('${movies.Title}', '${movies.Year}')">Nominate</button>
+                    <button type="button" id="nominatebtn${movies.Title}" class="nominatebtn" onclick="nominate('${movies.Title}', '${movies.Year}')">Nominate</button>
                     `;
                 })
                 //$('#results-title').append('Results for "'+ searchtxt +'"');
@@ -50,7 +50,7 @@ $(document).ready(()=> {
             let output = `
                 <div id="nom_result">
                 <h5 id="movie_nom"> `+ title + ` (`+ year +`)</h5> 
-                <button type="button" id="removebtn" onclick="remove()">Remove</button>
+                <button type="button" id="removebtn" class="removebtn" onclick="remove()">Remove</button>
                 </div>
                 `;
             $('#nominations').append(output);
